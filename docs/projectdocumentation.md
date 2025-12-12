@@ -183,6 +183,29 @@ sequenceDiagram
 
     Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
 ```
+### 4.2 Architecture Diagram  
+
+```mermaid
+graph LR
+    User((User))
+    Orchestrator((LangChain RunnableSequence))
+
+    Parser[ParseProduct Agent]
+    QGen[QuestionGen Agent]
+    FAQ[FAQ Agent]
+    Page[ProductPage Agent]
+    Compare[Comparison Agent]
+
+    User --> Orchestrator
+    Orchestrator --> Parser
+    Parser --> QGen
+    QGen --> FAQ
+    Parser --> Page
+    Parser --> Compare
+    FAQ --> Orchestrator
+    Page --> Orchestrator
+    Compare --> Orchestrator
+    Orchestrator --> User
 
 
 
