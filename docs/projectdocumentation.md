@@ -58,4 +58,155 @@ Each agent has a distinct responsibility and communicates through structured JSO
 ---
 
 ### 4.1 High-Level Architecture
+Raw Product JSON
+│
+▼
+[ParseProductAgent]
+│
+▼
+[QuestionGeneratorAgent]
+│
+▼
+[FAQAgent]
+│
+▼
+[ProductPageAgent]
+│
+▼
+[ComparisonAgent]
+│
+▼
+Output → faq.json, product_page.json, comparison_page.json
 
+
+---
+
+### 4.2 Agent Responsibilities
+
+---
+
+#### **1. ParseProductAgent**
+- Validates required product fields  
+- Normalizes lists  
+- Converts price strings to integers  
+- Outputs canonical product JSON  
+
+---
+
+#### **2. QuestionGenerationAgent**
+- Generates **15 categorized questions**  
+- Ensures structure:  
+
+
+{ "questions": [{question, category}, ...] }
+
+- Provides customer-oriented queries for FAQ generation  
+
+---
+
+#### **3. FAQAgent**
+- Takes product + questions  
+- Produces structured FAQ JSON:  
+- question  
+- answer  
+- category  
+
+---
+
+#### **4. ProductPageAgent**
+Produces a complete product description JSON:
+
+- summary  
+- key benefits  
+- usage instructions  
+- safety precautions  
+- ingredient breakdown  
+- price section  
+- ideal skin types  
+
+---
+
+#### **5. ComparisonAgent**
+- Invents fictional **Product B**  
+- Compares A vs B on ingredients, benefits, concentration, price  
+- Outputs structured comparison JSON  
+
+---
+
+## 4.3 Workflow Orchestration with RunnableSequence
+
+The execution chain:
+
+
+
+Step 1 → parse_product
+Step 2 → generate_questions
+Step 3 → build_faq
+Step 4 → build_product_page
+Step 5 → build_comparison
+
+
+This ensures:
+
+- Structured state passing (`ctx`)  
+- Clean modular workflow  
+- True agentic behavior (tool → model → tool → model)  
+- Avoids static scripting  
+- Reproducible multi-stage reasoning  
+
+---
+
+## 4.4 Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Parser
+    participant QGen
+    participant FAQ
+    participant Page
+    participant Compare
+
+    User->>Parser: Product JSON
+    Parser->>QGen: Normalized Product
+    QGen->>FAQ: Questions + Product
+    FAQ->>Page: FAQ + Product
+    Page->>Compare: Product Page + Product
+    Compare->>User: JSON Outputs
+
+5. Conclusion
+
+This project satisfies the Kasparro Applied AI Engineer Challenge by providing:
+
+A real multi-agent system using LangChain
+
+Clear agent boundaries with specialized responsibilities
+
+StructuredTool + Pydantic schema-based tool definitions
+
+Prompt-template-driven content generation
+
+Deterministic JSON outputs
+
+Expandable and maintainable architecture
+
+The system is ready for future enhancements such as RAG integration, multi-product automation, caching, or LangGraph-based agent state machines.
+
+
+---
+
+# 🎉 YOUR ISSUE IS FIXED
+
+You were seeing ChatGPT’s **preview header**, not a real problem with your Markdown.
+
+This version is **clean, minimal, and exactly what must appear in GitHub**.
+
+---
+
+If you want, I can also generate:
+
+✅ A polished PDF  
+✅ A GitHub Pages documentation site  
+✅ Mermaid diagrams as SVG/PNG  
+
+Just tell me!
