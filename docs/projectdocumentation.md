@@ -58,6 +58,7 @@ Each agent has a distinct responsibility and communicates through structured JSO
 ---
 
 ### 4.1 High-Level Architecture
+```mermaid
 Raw Product JSON
 │
 ▼
@@ -77,7 +78,7 @@ Raw Product JSON
 │
 ▼
 Output → faq.json, product_page.json, comparison_page.json
-
+```
 
 ---
 
@@ -219,5 +220,6 @@ flowchart TD
     G --> H[Return Final Output JSONs]
     H --> I[End]
 ```
+
 
 
