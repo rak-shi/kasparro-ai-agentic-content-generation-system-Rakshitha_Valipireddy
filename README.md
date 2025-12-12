@@ -41,25 +41,7 @@ All outputs follow strict, machine-readable JSON formats.
 
 ## 📁 Folder Structure
 
-project/
-│
-├── agents_langchain/
-│ ├── tools.py
-│ ├── prompts.py
-│ ├── schemas.py
-│
-├── docs/
-│ ├── projectdocumentation.md
-│
-├── output_langchain/
-│ ├── faq.json
-│ ├── product_page.json
-│ ├── comparison_page.json
-│
-├── main_langchain.py
-├── requirements.txt
-├── README.md
-└── .env
+<img width="917" height="602" alt="image" src="https://github.com/user-attachments/assets/d357442d-c674-43ea-8303-05079e9c0664" />
 
 
 ---
@@ -92,3 +74,4 @@ python main_langchain.py
 Results will appear in:
 
 output_langchain/
+
