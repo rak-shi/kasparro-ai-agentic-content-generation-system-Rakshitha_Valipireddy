@@ -1,0 +1,37 @@
+{
+  "glowboost_product_name": "GlowBoost Vitamin C Serum",
+  "product_b_name": "Lumina Vitamin C Elixir",
+  "overview": "Lumina Vitamin C Elixir is a competing product that offers a higher concentration of Vitamin C and additional key ingredients, but at a higher price point.",
+  "comparisons": [
+    {
+      "attribute": "Price",
+      "glowboost_value": "699",
+      "product_b_value": "899",
+      "comparison_note": "Lumina Vitamin C Elixir is 29% more expensive than GlowBoost Vitamin C Serum"
+    },
+    {
+      "attribute": "Concentration",
+      "glowboost_value": "10% Vitamin C",
+      "product_b_value": "15% Vitamin C",
+      "comparison_note": "Lumina Vitamin C Elixir has a 50% higher concentration of Vitamin C than GlowBoost Vitamin C Serum"
+    },
+    {
+      "attribute": "Key Ingredients",
+      "glowboost_value": "Vitamin C, Hyaluronic Acid",
+      "product_b_value": "Vitamin C, Hyaluronic Acid, Niacinamide",
+      "comparison_note": "Lumina Vitamin C Elixir has an additional key ingredient, Niacinamide, which is not found in GlowBoost Vitamin C Serum"
+    },
+    {
+      "attribute": "Benefits",
+      "glowboost_value": "Brightening, Fades dark spots",
+      "product_b_value": "Brightening, Fades dark spots, Improves skin elasticity",
+      "comparison_note": "Lumina Vitamin C Elixir has an additional benefit, improving skin elasticity, which is not claimed by GlowBoost Vitamin C Serum"
+    },
+    {
+      "attribute": "Skin Types",
+      "glowboost_value": "Oily, Combination",
+      "product_b_value": "Oily, Combination, Dry",
+      "comparison_note": "Lumina Vitamin C Elixir is suitable for an additional skin type, dry skin, which is not claimed by GlowBoost Vitamin C Serum"
+    }
+  ]
+}
