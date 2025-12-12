@@ -176,26 +176,20 @@ sequenceDiagram
 ### 4.5 Architecture Diagram  
 
 ```mermaid
-graph LR
-    User((User))
-    Orchestrator((LangChain RunnableSequence))
+flowchart TB
+    User([User]) --> Core[LangChain RunnableSequence]
 
-    Parser[ParseProduct Agent]
-    QGen[QuestionGen Agent]
-    FAQ[FAQ Agent]
-    Page[ProductPage Agent]
-    Compare[Comparison Agent]
+    Core --> Parse[ParseProduct Agent]
 
-    User --> Orchestrator
-    Orchestrator --> Parser
-    Parser --> QGen
-    QGen --> FAQ
-    Parser --> Page
-    Parser --> Compare
-    FAQ --> Orchestrator
-    Page --> Orchestrator
-    Compare --> Orchestrator
-    Orchestrator --> User
+    Parse --> QGen[QuestionGen Agent]
+    Parse --> Page[ProductPage Agent]
+    Parse --> Compare[Comparison Agent]
+
+    QGen --> FAQ[FAQ Agent]
+    Page --> FAQ
+    Compare --> FAQ
+
+    FAQ --> Core --> User
 ```
 ### 4.6 Flow Chart
 ```mermaid
@@ -209,6 +203,7 @@ flowchart TD
     G --> H[Return Final Output JSONs]
     H --> I[End]
 ```
+
 
 
 
