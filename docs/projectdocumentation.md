@@ -210,6 +210,32 @@ flowchart TD
     H --> I[End]
 ```
 
+### Rendered Output
+## product_page.json Output
+<img width="1542" height="508" alt="image" src="https://github.com/user-attachments/assets/80f7d913-ca18-4be6-bee7-48db1363e85f" />
+
+## faq.json Output
+<img width="1833" height="802" alt="image" src="https://github.com/user-attachments/assets/2fe3b6b3-40b0-429c-b7b8-08a22dd950d1" />
+
+<img width="1837" height="788" alt="image" src="https://github.com/user-attachments/assets/b41fe595-d1ee-4f1b-8638-4cd32a6a1e10" />
+
+## comparison_page.json Output
+<img width="1318" height="748" alt="image" src="https://github.com/user-attachments/assets/55b9778e-32a9-4ac0-904d-44f83a6cae85" />
+
+
+
+
+## 8. Testing & Validation
+
+### ✔ Execution Test
+
+The pipeline was executed using:
+
+```bash
+python main.py
+
+```
+
 
 
 
