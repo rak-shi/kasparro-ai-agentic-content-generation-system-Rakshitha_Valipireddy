@@ -57,7 +57,9 @@ Each agent has a distinct responsibility and communicates through structured JSO
 
 ---
 
+
 ### 4.1 High-Level Architecture
+```mermaid
 flowchart TD
     A[Raw Product JSON] --> B[ParseProductAgent]
     B --> C[QuestionGeneratorAgent]
@@ -65,6 +67,7 @@ flowchart TD
     D --> E[ProductPageAgent]
     E --> F[ComparisonAgent]
     F --> G[Final Output JSONs]
+```
 
 ---
 
@@ -206,6 +209,7 @@ flowchart TD
     G --> H[Return Final Output JSONs]
     H --> I[End]
 ```
+
 
 
 
