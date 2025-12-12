@@ -219,9 +219,10 @@ flowchart TD
     G --> H[Return Final Output JSONs]
     H --> I[End]
 ```
+## 4.5 Sequence Diagram (Mermaid)
 
-### sequenceDiagram
 ```mermaid
+sequenceDiagram
     participant User
     participant Parser as ParseProductAgent
     participant QGen as QuestionGenAgent
@@ -244,12 +245,6 @@ flowchart TD
     Parser->>Compare: Product JSON
     Compare-->>Parser: Comparison Page JSON
 
-    Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
-
+    Parser-->>User: Final Output JSONs
 ```
-
-
-
-
-
 
