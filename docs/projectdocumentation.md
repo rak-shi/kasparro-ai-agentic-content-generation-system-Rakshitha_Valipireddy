@@ -215,7 +215,9 @@ flowchart TD
 The following screenshot shows the Groq Dashboard metrics while running the agentic content-generation pipeline using the `lang_chain_key`.  
 The HTTP 200 spike confirms successful execution of LLM calls made through LangChain tools (ParseProduct, QuestionGen, FAQ, ProductPage, Comparison).
 
-![Groq Dashboard Metrics](<img width="1851" height="754" alt="image" src="https://github.com/user-attachments/assets/984c5b8e-1727-4837-ab3d-eaebbbdf13ec" />
+<img width="1851" height="754" alt="image" src="https://github.com/user-attachments/assets/958ed8ff-3040-4d4f-a7ef-10345046d4fb" />
+
+
 
 
 
