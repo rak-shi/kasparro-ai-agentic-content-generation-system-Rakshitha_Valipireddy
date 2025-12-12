@@ -182,5 +182,7 @@ sequenceDiagram
     Compare-->>Parser: Comparison Page JSON
 
     Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
+```
+
 
 
