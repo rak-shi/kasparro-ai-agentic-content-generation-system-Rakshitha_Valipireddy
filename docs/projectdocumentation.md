@@ -208,6 +208,7 @@ graph LR
     Orchestrator --> User
 ```
 ### 4.6 Flow Chart
+```mermaid
 flowchart TD
     A[Start] --> B[User Provides Raw Product JSON]
     B --> C[ParseProduct Agent Validates & Normalizes Data]
@@ -217,9 +218,10 @@ flowchart TD
     F --> G[Comparison Agent Builds Comparison JSON]
     G --> H[Return Final Output JSONs]
     H --> I[End]
-
+```
 
 ### sequenceDiagram
+```mermaid
     participant User
     participant Parser as ParseProductAgent
     participant QGen as QuestionGenAgent
@@ -244,6 +246,7 @@ flowchart TD
 
     Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
 
+```
 
 
 
