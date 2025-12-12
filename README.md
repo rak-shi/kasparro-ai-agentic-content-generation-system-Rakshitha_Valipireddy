@@ -50,9 +50,9 @@ All outputs follow strict, machine-readable JSON formats.
 All generated outputs are stored in:
 
 output_langchain/
-├── faq.json
-├── product_page.json
-└── comparison_page.json
+--├── faq.json
+--├── product_page.json
+--└── comparison_page.json
 
 ## ⚙️ Setup & Installation
 
@@ -84,5 +84,6 @@ Results will appear in:
 output_langchain/
 
 ```
+
 
 
