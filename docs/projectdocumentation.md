@@ -139,11 +139,11 @@ The execution chain:
 
 
 
-Step 1 → parse_product
-Step 2 → generate_questions
-Step 3 → build_faq
-Step 4 → build_product_page
-Step 5 → build_comparison
+- Step 1 → parse_product
+- Step 2 → generate_questions
+- Step 3 → build_faq
+- Step 4 → build_product_page
+- Step 5 → build_comparison
 
 
 This ensures:
@@ -243,6 +243,7 @@ flowchart TD
     Compare-->>Parser: Comparison Page JSON
 
     Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
+
 
 
 
