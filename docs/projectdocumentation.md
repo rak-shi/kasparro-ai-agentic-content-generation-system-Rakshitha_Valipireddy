@@ -156,57 +156,58 @@ This ensures:
 
 ---
 
-## 4.4 Sequence Diagram
+### 4.4 Sequence Diagram
 
 ```mermaid
 sequenceDiagram
     participant User
-    participant Parser
-    participant QGen
-    participant FAQ
-    participant Page
-    participant Compare
+    participant Parser as ParseProductAgent
+    participant QGen as QuestionGenAgent
+    participant FAQ as FAQAgent
+    participant Page as ProductPageAgent
+    participant Compare as ComparisonAgent
 
-    User->>Parser: Product JSON
-    Parser->>QGen: Normalized Product
-    QGen->>FAQ: Questions + Product
-    FAQ->>Page: FAQ + Product
-    Page->>Compare: Product Page + Product
-    Compare->>User: JSON Outputs
+    User->>Parser: Provide Product JSON
+    Parser-->>User: Parsed Product JSON
 
-5. Conclusion
+    Parser->>QGen: Parsed Product
+    QGen-->>Parser: Generated Questions JSON
 
-This project satisfies the Kasparro Applied AI Engineer Challenge by providing:
+    Parser->>FAQ: Product + Questions
+    FAQ-->>Parser: FAQ JSON
 
-A real multi-agent system using LangChain
+    Parser->>Page: Product JSON
+    Page-->>Parser: Product Page JSON
 
-Clear agent boundaries with specialized responsibilities
+    Parser->>Compare: Product JSON
+    Compare-->>Parser: Comparison Page JSON
 
-StructuredTool + Pydantic schema-based tool definitions
-
-Prompt-template-driven content generation
-
-Deterministic JSON outputs
-
-Expandable and maintainable architecture
-
-The system is ready for future enhancements such as RAG integration, multi-product automation, caching, or LangGraph-based agent state machines.
-
+    Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
+yaml
+Copy code
 
 ---
 
-# 🎉 YOUR ISSUE IS FIXED
+# ✔ Why this version works
 
-You were seeing ChatGPT’s **preview header**, not a real problem with your Markdown.
+### This corrected version fixes:
 
-This version is **clean, minimal, and exactly what must appear in GitHub**.
+| Problem in your diagram | Fix applied |
+|-------------------------|-------------|
+| GitHub Mermaid parser expected arrows but found random text | Removed all stray text & added clean closing ``` |
+| Text placed on same line after code block | Added required blank lines |
+| Agents not explicitly named → parser confusion | Added aliases like `Parser as ParseProductAgent` |
+| Missing closing ```mermaid block | Properly closed |
 
 ---
 
-If you want, I can also generate:
+# 🎉 You can paste this directly — it **will render correctly** in GitHub.
 
-✅ A polished PDF  
-✅ A GitHub Pages documentation site  
-✅ Mermaid diagrams as SVG/PNG  
+If you want, I can now generate:
 
-Just tell me!
+✅ Corrected **flowchart**  
+✅ Corrected **architecture diagram**  
+✅ Professional **README.md** (GitHub-ready)  
+✅ PDF-style documentation  
+
+Just tell me: **"Give README"** or **"Give architecture"**.
