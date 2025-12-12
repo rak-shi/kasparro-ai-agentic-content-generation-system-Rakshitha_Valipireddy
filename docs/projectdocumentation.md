@@ -183,7 +183,7 @@ sequenceDiagram
 
     Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
 ```
-### 4.2 Architecture Diagram  
+### 4.5 Architecture Diagram  
 
 ```mermaid
 graph LR
@@ -206,6 +206,19 @@ graph LR
     Page --> Orchestrator
     Compare --> Orchestrator
     Orchestrator --> User
+```
+### 4.6 Flow Chart
+flowchart TD
+    A[Start] --> B[User Provides Raw Product JSON]
+    B --> C[ParseProduct Agent Validates & Normalizes Data]
+    C --> D[QuestionGen Agent Generates Questions]
+    D --> E[FAQ Agent Builds FAQ JSON]
+    E --> F[ProductPage Agent Creates Description Page]
+    F --> G[Comparison Agent Builds Comparison JSON]
+    G --> H[Return Final Output JSONs]
+    H --> I[End]
+    
+
 
 
 
