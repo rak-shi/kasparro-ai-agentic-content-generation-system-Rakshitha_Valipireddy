@@ -217,7 +217,34 @@ flowchart TD
     F --> G[Comparison Agent Builds Comparison JSON]
     G --> H[Return Final Output JSONs]
     H --> I[End]
-    
+
+
+### sequenceDiagram
+    participant User
+    participant Parser as ParseProductAgent
+    participant QGen as QuestionGenAgent
+    participant FAQ as FAQAgent
+    participant Page as ProductPageAgent
+    participant Compare as ComparisonAgent
+
+    User->>Parser: Provide Product JSON
+    Parser-->>User: Parsed Product JSON
+
+    Parser->>QGen: Parsed Product
+    QGen-->>Parser: Generated Questions JSON
+
+    Parser->>FAQ: Product + Questions
+    FAQ-->>Parser: FAQ JSON
+
+    Parser->>Page: Product JSON
+    Page-->>Parser: Product Page JSON
+
+    Parser->>Compare: Product JSON
+    Compare-->>Parser: Comparison Page JSON
+
+    Parser-->>User: Final Outputs (FAQ, Product Page, Comparison Page)
+
+
 
 
 
